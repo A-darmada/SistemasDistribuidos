@@ -1,14 +1,14 @@
 # SistemasDistribuidos
-#Sistemas Distribuídos 2022.1 - Prof. Daniel Ratton
-##Trabalho Prático 01
-###Álvaro d’Armada - DRE 117084024
-###Hussein Latif - DRE 119051700
+# Sistemas Distribuídos 2022.1 - Prof. Daniel Ratton
+## Trabalho Prático 01
+### Álvaro d’Armada - DRE 117084024
+### Hussein Latif - DRE 119051700
 
 
 
-#HowToUse:
+# HowToUse:
 
-##Sockets:
+## Sockets:
 
 produtor.exe -portno -ncount
 
