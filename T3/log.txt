@@ -1,0 +1,12 @@
+301878450980300  Request recebido. ID: 1
+301878452193800  Grant enviado para o processo 1
+301878453811200  Request recebido. ID: 0
+301878455339300  Request recebido. ID: 2
+301879466782900  Request recebido. ID: 2
+301879468787500  Release Recebido   ID: 1
+301879474622400  Grant enviado para o processo 0
+301880490813400  Request recebido. ID: 0
+301880492142900  Release Recebido   ID: 0
+301880494232400  Grant enviado para o processo 2
+301881514206900  Request recebido. ID: 1
+301881515757500  Release Recebido   ID: 2
