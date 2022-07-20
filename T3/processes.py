@@ -44,6 +44,8 @@ def requestAccessAndSend(pid):
 
 threads = list()
 
+UDPSocket.sendto(str.encode(str(n)), coordinatorAddress) #Informando à central o número de processos
+
 for i in range(n):
     x = Thread(target = requestAccessAndSend, args = (i,))
     threads.append(x)
