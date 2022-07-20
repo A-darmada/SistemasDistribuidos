@@ -4,35 +4,43 @@ from threading import Thread
 
 
 coordinatorAddress = ("localhost", 8080)
+localIP     = "localhost"
+localPort   = 8081
 
 bufferSize = 512
 
 UDPSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 
+UDPSocket.bind((localIP, localPort))
+
 n = int(input("Digite o número de processos a serem inicializados: "))
-r = int(input("Digite o número de 1execuções de cada processo: "))
+r = int(input("Digite o número de execuções de cada processo: "))
 k = int(input("Digite o número de segundos que cada processo deve aguardar ao finalizar a região crítica: "))
 
 def requestAccessAndSend(pid):
     requestMessage = "1|" + str(pid) + "|000000"
-    encodedMessage = str.encode(requestMessage)
+    encodedRequestMessage = str.encode(requestMessage)
 
     for i in range(r):
 
-        UDPSocket.sendto(encodedMessage, coordinatorAddress)
+        print(requestMessage)
+        UDPSocket.sendto(encodedRequestMessage, coordinatorAddress)
+        
 
         response = UDPSocket.recvfrom(bufferSize)
 
-        if (response[0].decode("utf-8")[0] == "2"):
+        if (response[0].decode("utf-8")[0] == "2" and response[0].decode("utf-8")[2] == str(pid)):
             results = open("resultados.txt", "a")
             now = time.perf_counter_ns()
-            results.write(str(pid) + " - " + str(now))
+            results.write("Processo: " + str(pid) + " - Tempo: " + str(now) + "\n")
             results.close()
 
             releaseMessage = "3|" + str(pid) + "|000000"
-            encodedMessage = str.encode(releaseMessage)
+            print(releaseMessage)
+            encodedResponseMessage = str.encode(releaseMessage)
             time.sleep(k)
-            UDPSocket.sendto(encodedMessage, coordinatorAddress)
+            UDPSocket.sendto(encodedResponseMessage, coordinatorAddress)
+    
 
 threads = list()
 

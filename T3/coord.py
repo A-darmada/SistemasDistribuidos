@@ -72,7 +72,7 @@ def receiveMessages():
         print(bytesAddressPair)
         message = bytesAddressPair[0]
         address = bytesAddressPair[1]
-        log = open(r'C:\Users\acrda\Projetos\ufrj\SistDist\T3\log.txt', 'a')
+        log = open(r'D:\Estudos\Eng\SISTEMAS DISTRIBUIDOS\Trabalho3\SistemasDistribuidos\T3\log.txt', 'a')
         actualTime = time.perf_counter_ns()
         time.sleep(1)
         log.write(str(actualTime))
@@ -96,7 +96,7 @@ def central():
                 fifoMessages.popleft()
                 addresses.popleft()  
 
-            log = open(r'C:\Users\acrda\Projetos\ufrj\SistDist\T3\log.txt', 'a')
+            log = open(r'D:\Estudos\Eng\SISTEMAS DISTRIBUIDOS\Trabalho3\SistemasDistribuidos\T3\log.txt', 'a')
             actualTime = time.perf_counter_ns()
             log.write(str(actualTime))
             log.write("  Grant enviado para o processo ")
@@ -114,7 +114,7 @@ def central():
            
             messager = bytesAddressPair2[0].decode("utf-8")
             auxlist.append(messager)
-            log = open(r'C:\Users\acrda\Projetos\ufrj\SistDist\T3\log.txt', 'a')
+            log = open(r'D:\Estudos\Eng\SISTEMAS DISTRIBUIDOS\Trabalho3\SistemasDistribuidos\T3\log.txt', 'a')
             actualTime = time.perf_counter_ns()
             log.write(str(actualTime))
             log.write("  Release Recebido ")

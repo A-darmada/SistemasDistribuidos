@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-#imports
 import socket
 import time
 import os
@@ -13,10 +9,11 @@ localIP     = "localhost"
 localPort   = 8080
 bufferSize  = 1024
 
+proccessAddress = ("localhost", 8081)
+
 # Create a datagram socket
 UDPServerSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
  
-
 # Bind to address and ip
 UDPServerSocket.bind((localIP, localPort))
  
@@ -24,8 +21,8 @@ print("UDP server up and listening")
 
 # criando filas
 fifoMessages = []
-addresses = []
 auxlist = []
+hasStarted = False
 
 #função que retorna quantas vezes cada processo foi atendido TODO
 def timesProcess():
@@ -38,8 +35,6 @@ def timesProcess():
             if w[2]==j+1:
                 a[1][j]+=1
     return a 
-         
-                
 
 #Definindo a interface com o usuário
 def interface():
@@ -57,28 +52,28 @@ def receiveMessages():
     while True:
         
         ######### recebendo mensagem
-        bytesAddressPair = UDPServerSocket.recvfrom(bufferSize)
-        message = bytesAddressPair[0].decode("utf-8")
-        address = bytesAddressPair[1]
+        received = UDPServerSocket.recvfrom(bufferSize)
+        message = received[0].decode("utf-8")
         print(message)
-        log = open(r'C:\Users\acrda\Projetos\ufrj\SistDist\T3\log.txt', 'a')
-        actualTime = time.perf_counter_ns()
-        log.write(str(actualTime) + "  Request recebido. ID: " + str(message[2]) + "\n")
-        log.close()
         ##########
 
 
-        #########Grant
+        #########Request/Grant
         if message[0]=="1":
-            if len(fifoMessages) == 0:  ####Grant inicial
-                grant(address, message[2])
+            log = open(r'D:\Estudos\Eng\SISTEMAS DISTRIBUIDOS\Trabalho3\SistemasDistribuidos\T3\log.txt', 'a')
+            actualTime = time.perf_counter_ns()
+            log.write(str(actualTime) + "  Request recebido. ID: " + str(message[2]) + "\n")
+            log.close()
+            global hasStarted
+            if (not(hasStarted)):  ####Grant inicial
+                grant(proccessAddress, message[2])
+                hasStarted = True
             fifoMessages.append(message[2]) ####Adicionando nas filas
-            addresses.append(address)
 
         ########Release
         elif message[0]=="3":
             
-            log = open(r'C:\Users\acrda\Projetos\ufrj\SistDist\T3\log.txt', 'a')
+            log = open(r'D:\Estudos\Eng\SISTEMAS DISTRIBUIDOS\Trabalho3\SistemasDistribuidos\T3\log.txt', 'a')
             actualTime = time.perf_counter_ns()
             log.write(str(actualTime))
             log.write("  Release Recebido ")
@@ -88,19 +83,14 @@ def receiveMessages():
             log.close()
                
             fifoMessages.pop(0)  #####Retirando processo da fila
-            addresses.pop(0)
             if len(fifoMessages) != 0:
                 process = fifoMessages[0]
-                process_add = addresses[0]
-                grant(process_add, process)
-        
-        
-            
+                grant(proccessAddress, process)
 
 def grant(address, id):
         msgGrant = "2|"+ str(id) +"|000000"
         print(msgGrant)
-        log = open(r'C:\Users\acrda\Projetos\ufrj\SistDist\T3\log.txt', 'a')
+        log = open(r'D:\Estudos\Eng\SISTEMAS DISTRIBUIDOS\Trabalho3\SistemasDistribuidos\T3\log.txt', 'a')
         actualTime = time.perf_counter_ns()
         log.write(str(actualTime))
         log.write("  Grant enviado para o processo ")
@@ -112,11 +102,9 @@ def grant(address, id):
         UDPServerSocket.sendto(bytesToSend, address)
         return 0
 
-
 coord= Thread(target=receiveMessages)
 
 inter = Thread(target=interface)
-
 
 coord.start()
 inter.start()
