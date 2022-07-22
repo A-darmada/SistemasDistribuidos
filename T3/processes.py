@@ -7,7 +7,7 @@ coordinatorAddress = ("localhost", 8080)
 localIP     = "localhost"
 localPort   = 8081
 
-bufferSize = 512
+bufferSize = 1024
 
 UDPSocket = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
 
@@ -28,8 +28,9 @@ def requestAccessAndSend(pid):
         
 
         response = UDPSocket.recvfrom(bufferSize)
+        flags = response[0].decode("utf-8").split("|")
 
-        if (response[0].decode("utf-8")[0] == "2" and response[0].decode("utf-8")[2] == str(pid)):
+        if (flags[0] == "2" and flags[1] == str(pid)):
             results = open("resultados.txt", "a")
             now = time.perf_counter_ns()
             results.write("Processo: " + str(pid) + " - Tempo: " + str(now) + "\n")
@@ -43,6 +44,8 @@ def requestAccessAndSend(pid):
     
 
 threads = list()
+
+open("resultados.txt", "w").close()
 
 UDPSocket.sendto(str.encode(str(n)), coordinatorAddress) #Informando à central o número de processos
 

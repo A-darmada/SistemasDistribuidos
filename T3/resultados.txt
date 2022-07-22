@@ -1,0 +1,16 @@
+Processo: 0 - Tempo: 45225990885300
+Processo: 1 - Tempo: 45227009240800
+Processo: 2 - Tempo: 45228035057500
+Processo: 3 - Tempo: 45229060437200
+Processo: 4 - Tempo: 45230083365300
+Processo: 5 - Tempo: 45231096439800
+Processo: 6 - Tempo: 45232123785400
+Processo: 7 - Tempo: 45233147888800
+Processo: 8 - Tempo: 45234167013500
+Processo: 9 - Tempo: 45235183739300
+Processo: 10 - Tempo: 45236212012800
+Processo: 11 - Tempo: 45237225903100
+Processo: 12 - Tempo: 45238248505300
+Processo: 13 - Tempo: 45239266330400
+Processo: 14 - Tempo: 45240293854800
+Processo: 15 - Tempo: 45241313338300

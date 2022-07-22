@@ -1,0 +1,161 @@
+44495633001800  Request recebido. ID: 0
+44495635769800  Grant enviado para o processo 0
+44495641559900  Request recebido. ID: 1
+44495644943100  Request recebido. ID: 2
+44495648921700  Request recebido. ID: 3
+44495653019900  Request recebido. ID: 4
+44495655191500  Request recebido. ID: 5
+44495662365700  Request recebido. ID: 6
+44495665558400  Request recebido. ID: 7
+44495668940800  Request recebido. ID: 8
+44495671619400  Request recebido. ID: 9
+44495675078100  Request recebido. ID: 10
+44495679871900  Request recebido. ID: 11
+44495682347900  Request recebido. ID: 12
+44495683556300  Request recebido. ID: 13
+44495685108400  Request recebido. ID: 14
+44495688745600  Request recebido. ID: 15
+44496663042600  Release Recebido ID:0
+44496666029700  Grant enviado para o processo 1
+44496676433200  Request recebido. ID: 0
+44497676746900  Release Recebido ID:1
+44497680734000  Grant enviado para o processo 2
+44497689636700  Request recebido. ID: 1
+44498693502600  Release Recebido ID:2
+44498696701300  Grant enviado para o processo 3
+44498706490600  Request recebido. ID: 2
+44499712082600  Release Recebido ID:3
+44499718011600  Grant enviado para o processo 4
+44499735194500  Request recebido. ID: 3
+44500730633500  Release Recebido ID:4
+44500736519100  Grant enviado para o processo 5
+44500741479500  Request recebido. ID: 4
+44501749140500  Release Recebido ID:5
+44501754981000  Grant enviado para o processo 6
+44501760026700  Request recebido. ID: 5
+44502766940700  Release Recebido ID:6
+44502773493700  Grant enviado para o processo 7
+44502777609800  Request recebido. ID: 6
+44503784893300  Release Recebido ID:7
+44503791630300  Grant enviado para o processo 8
+44503797088000  Request recebido. ID: 7
+44504802249700  Release Recebido ID:8
+44504808645800  Grant enviado para o processo 9
+44504821552300  Request recebido. ID: 8
+44505819492900  Release Recebido ID:9
+44505825796600  Grant enviado para o processo 10
+44505831008700  Request recebido. ID: 9
+44505834944800  Request recebido. ID: 10
+44887896015800  Request recebido. ID: 0
+44887897234200  Grant enviado para o processo 0
+44887901046000  Request recebido. ID: 1
+44887904476800  Request recebido. ID: 2
+44887906659900  Request recebido. ID: 3
+44887912388200  Request recebido. ID: 4
+44887914303000  Request recebido. ID: 5
+44887916212800  Request recebido. ID: 6
+44887917697000  Request recebido. ID: 7
+44887923550800  Request recebido. ID: 8
+44887928436600  Request recebido. ID: 9
+44887930822300  Request recebido. ID: 10
+44887933676600  Request recebido. ID: 11
+44887935209200  Request recebido. ID: 12
+44887938546600  Request recebido. ID: 13
+44887952904600  Request recebido. ID: 14
+44887956240100  Request recebido. ID: 15
+44888917266300  Release Recebido ID:0
+44888920828900  Grant enviado para o processo 1
+44889933131000  Release Recebido ID:1
+44889935043000  Grant enviado para o processo 2
+44890950087400  Release Recebido ID:2
+44890951083900  Grant enviado para o processo 3
+44891968659900  Release Recebido ID:3
+44891970994600  Grant enviado para o processo 4
+44892986409700  Release Recebido ID:4
+44892991110500  Grant enviado para o processo 5
+44894004208100  Release Recebido ID:5
+44894008897500  Grant enviado para o processo 6
+44895021446600  Release Recebido ID:6
+44895023079200  Grant enviado para o processo 7
+44896041568900  Release Recebido ID:7
+44896046812300  Grant enviado para o processo 8
+44897059571700  Release Recebido ID:8
+44897064121400  Grant enviado para o processo 9
+44898077535700  Release Recebido ID:9
+44898082406700  Grant enviado para o processo 10
+44899095940400  Release Recebido ID:10
+44899100272100  Grant enviado para o processo 11
+44900114390500  Release Recebido ID:11
+44900119432800  Grant enviado para o processo 12
+44901132882700  Release Recebido ID:12
+44901137315500  Grant enviado para o processo 13
+44902150383300  Release Recebido ID:13
+44902155120000  Grant enviado para o processo 14
+44903168146000  Release Recebido ID:14
+44903172443200  Grant enviado para o processo 15
+44904185196500  Release Recebido ID:15
+45109706047800  Request recebido. ID: 0
+45109708144000  Grant enviado para o processo 0
+45109711878900  Request recebido. ID: 1
+45109718840600  Request recebido. ID: 2
+45109720700600  Request recebido. ID: 3
+45109725494200  Request recebido. ID: 4
+45109727260600  Request recebido. ID: 5
+45109729398200  Request recebido. ID: 6
+45109730349200  Request recebido. ID: 7
+45109731977500  Request recebido. ID: 8
+45109734313200  Request recebido. ID: 9
+45109735829200  Request recebido. ID: 10
+45109739126300  Request recebido. ID: 11
+45109742845600  Request recebido. ID: 12
+45109744991200  Request recebido. ID: 13
+45109747895900  Request recebido. ID: 14
+45109749820000  Request recebido. ID: 15
+45225985438100  Request recebido. ID: 0
+45225988863700  Grant enviado para o processo 0
+45225993694000  Request recebido. ID: 1
+45225998562600  Request recebido. ID: 2
+45226001231300  Request recebido. ID: 3
+45226009169200  Request recebido. ID: 4
+45226019451100  Request recebido. ID: 5
+45226024111500  Request recebido. ID: 6
+45226028402700  Request recebido. ID: 7
+45226029815100  Request recebido. ID: 8
+45226031379400  Request recebido. ID: 9
+45226032648400  Request recebido. ID: 10
+45226033608400  Request recebido. ID: 11
+45226034550200  Request recebido. ID: 12
+45226038197200  Request recebido. ID: 13
+45226042360200  Request recebido. ID: 14
+45226043633200  Request recebido. ID: 15
+45227001092500  Release Recebido ID:0
+45227005029300  Grant enviado para o processo 1
+45228028791900  Release Recebido ID:1
+45228030849600  Grant enviado para o processo 2
+45229057063400  Release Recebido ID:2
+45229058143100  Grant enviado para o processo 3
+45230076811300  Release Recebido ID:3
+45230079384300  Grant enviado para o processo 4
+45231092983700  Release Recebido ID:4
+45231094749100  Grant enviado para o processo 5
+45232114947700  Release Recebido ID:5
+45232119529500  Grant enviado para o processo 6
+45233138946300  Release Recebido ID:6
+45233143976900  Grant enviado para o processo 7
+45234158263100  Release Recebido ID:7
+45234162775700  Grant enviado para o processo 8
+45235177742400  Release Recebido ID:8
+45235180903100  Grant enviado para o processo 9
+45236202639400  Release Recebido ID:9
+45236207826400  Grant enviado para o processo 10
+45237220350300  Release Recebido ID:10
+45237223157100  Grant enviado para o processo 11
+45238239759100  Release Recebido ID:11
+45238244212600  Grant enviado para o processo 12
+45239257021900  Release Recebido ID:12
+45239262119200  Grant enviado para o processo 13
+45240289153800  Release Recebido ID:13
+45240292205300  Grant enviado para o processo 14
+45241309243600  Release Recebido ID:14
+45241311099500  Grant enviado para o processo 15
+45242321664000  Release Recebido ID:15

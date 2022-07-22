@@ -36,7 +36,10 @@ SemAtendimento = Semaphore()
 #Definindo a interface com o usuário
 def interface():
     while True:
-        userresp=int(input("Escolha uma das opções a seguir, digitando um desses:\n(1) Imprimir fila de pedidos atual.\n(2) Imprimir quantas vezes cada processo foi atendido.\n(3) Encerrar a execução.\n"))
+        userresp=int(input("Escolha uma das opções a seguir, digitando um desses:\
+            \n(1) Imprimir fila de pedidos atual.\
+            \n(2) Imprimir quantas vezes cada processo foi atendido.\
+            \n(3) Encerrar a execução.\n"))
         if userresp==1:
             SemFila.acquire()
             print(fifoMessages)
@@ -47,15 +50,15 @@ def interface():
             SemAtendimento.release()
         elif userresp==3:
             os.abort()
-        else : print("COMANDO INVALIDO!\n")
+        else : print("comando inválido!\n")
 
 #onde vão chegar as mensagens de REQUEST, que vão para a fila        
-def receiveMessages():
+def central():
     while True:
         
         ######### recebendo mensagem
         received = UDPServerSocket.recvfrom(bufferSize)
-        message = received[0].decode("utf-8")
+        message = received[0].decode("utf-8").split("|")
         print(message)
 
         #########Request/Grant inicial
@@ -63,18 +66,18 @@ def receiveMessages():
             #Escrevendo no log
             log = open(r'C:\Users\acrda\Projetos\ufrj\SistDist\T3\log.txt', 'a')
             actualTime = time.perf_counter_ns()
-            log.write(str(actualTime) + "  Request recebido. ID: " + str(message[2]) + "\n")
+            log.write(str(actualTime) + "  Request recebido. ID: " + str(message[1]) + "\n")
             log.close()
 
             ####Grant inicial
             global hasStarted
             if (not(hasStarted)):  
-                grant(proccessAddress, message[2])
+                grant(proccessAddress, message[1])
                 hasStarted = True
             
             #Adicionando processo à fila
             SemFila.acquire()
-            fifoMessages.append(message[2]) 
+            fifoMessages.append(message[1]) 
             SemFila.release()
 
         ########Release
@@ -119,9 +122,9 @@ def grant(address, id):
 
 
 #Definindo threads para coordenador e interface
-coord= Thread(target=receiveMessages)
+cent= Thread(target=central)
 inter = Thread(target=interface)
 
 #Iniciando threads
-coord.start()
+cent.start()
 inter.start()
